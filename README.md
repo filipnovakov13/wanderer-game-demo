@@ -164,7 +164,7 @@ components:
   - Tile
 
     - EmptyTile
-      - NotEmptyTile
+    - NotEmptyTile
 
 - GameLogic
 
