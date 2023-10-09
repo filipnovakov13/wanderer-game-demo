@@ -149,22 +149,22 @@ components:
 
 - Models
 
-- GameObject
+- Game Objects:
 
   - Character
 
     - Monster
 
-      - Hero
+    - Hero
 
       - types
 
-      - Area
+  - Area
 
-      - Tile
+  - Tile
 
-        - EmptyTile
-        - NotEmptyTile
+    - EmptyTile
+      - NotEmptyTile
 
 - GameLogic
 
