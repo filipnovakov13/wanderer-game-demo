@@ -1,4 +1,8 @@
-package models;
+package models.characters;
+
+import models.Direction;
+import models.areaelements.Area;
+import views.Board;
 
 public class Hero {
 
@@ -38,22 +42,22 @@ public class Hero {
     }
 
     public void moveUp() {
-        y--;
-        direction = Direction.UP;
+        this.direction = Direction.UP;
+            y--;
     }
 
     public void moveDown() {
-        y++;
-        direction = Direction.DOWN;
+        this.direction = Direction.DOWN;
+            y++;
     }
 
     public void moveLeft() {
-        x--;
-        direction = Direction.LEFT;
+        this.direction = Direction.LEFT;
+            x--;
     }
 
     public void moveRight() {
-        x++;
-        direction = Direction.RIGHT;
+        this.direction = Direction.RIGHT;
+            x++;
     }
 }

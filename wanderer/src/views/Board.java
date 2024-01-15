@@ -1,8 +1,8 @@
 package views;
 
-import models.Area;
+import models.areaelements.Area;
 import models.Direction;
-import models.Hero;
+import models.characters.Hero;
 import models.areaelements.Floor;
 import models.areaelements.Tile;
 
@@ -78,7 +78,7 @@ public class Board extends JComponent {
         graphics.setColor(Color.BLACK);
         graphics.fillRect(0, 720, 720, 40);
         graphics.setColor(Color.WHITE);
-        graphics.setFont(new Font("Arial", Font.BOLD, 16));
+        graphics.setFont(new Font("Arial", Font.BOLD, 14));
         graphics.drawString("HP: 250", 20, 740);
     }
 }

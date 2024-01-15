@@ -1,4 +1,4 @@
-package models;
+package models.areaelements;
 
 import models.areaelements.Floor;
 import models.areaelements.Tile;
