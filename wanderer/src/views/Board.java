@@ -41,10 +41,18 @@ public class Board extends JComponent {
     }
 
     private void drawTiles(Graphics graphics) {
-        Tile[][] tiles = area.getTiles(0);
+        Tile[][] tiles = area.getTiles(1);
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles[0].length; j++) {
                 String image = tiles[j][i] instanceof Floor ? "img/floor.png" : "img/wall.png";
+                /*
+                Ternary operator (condition ? doIfTrue : else)  is the same as:
+                if (tiles[j][i] instanceof Floor) {
+                    image = "img/floor.png";
+                } else {
+                    image = "img/wall.png";
+                }
+                 */
                 new PositionedImage(image, i * tileSize, j * tileSize).draw(graphics);
             }
         }
