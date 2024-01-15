@@ -178,7 +178,7 @@ components:
 
 #### 5. Think about task breakdown in Kanban together
 
-Now that you see the big picture, **go through the stories together** and think
+Now that you see the big picture, **go through the stories** and think
 about how to break them down into tasks:
 
 - To classes
