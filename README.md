@@ -176,7 +176,7 @@ components:
   - handling events
   - current game
 
-#### 5. Think about task breakdown in Kanban together
+#### 5. Think about task breakdown in Kanban
 
 Now that you see the big picture, **go through the stories** and think
 about how to break them down into tasks:
