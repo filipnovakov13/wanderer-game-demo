@@ -1,5 +1,8 @@
 package models;
 
+import models.areaelements.Floor;
+import models.areaelements.Tile;
+import models.areaelements.Wall;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

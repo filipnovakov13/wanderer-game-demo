@@ -3,6 +3,8 @@ package views;
 import models.Area;
 import models.Direction;
 import models.Hero;
+import models.areaelements.Floor;
+import models.areaelements.Tile;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,10 +41,10 @@ public class Board extends JComponent {
     }
 
     private void drawTiles(Graphics graphics) {
-        int[][] tiles = area.getTiles(0);
+        Tile[][] tiles = area.getTiles(0);
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles[0].length; j++) {
-                String image = tiles[j][i] == 0 ? "img/floor.png" : "img/wall.png";
+                String image = tiles[j][i] instanceof Floor ? "img/floor.png" : "img/wall.png";
                 new PositionedImage(image, i * tileSize, j * tileSize).draw(graphics);
             }
         }
