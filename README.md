@@ -171,7 +171,7 @@ components:
   - current hero
   - current area
 
-- Main
+- Application
 
   - handling events
   - current game

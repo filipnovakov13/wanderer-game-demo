@@ -4,17 +4,28 @@ import models.Direction;
 import models.areaelements.Area;
 import views.Board;
 
-public class Hero {
+public class Hero extends Character{
 
     private int x;
     private int y;
 
     private Direction direction;
 
-    public Hero(int x, int y) {
+    public Hero(int level, int x, int y) {
+        super(level);
         this.x = x;
         this.y = y;
         direction = Direction.DOWN;
+        setMaxHP(20 + 3 * rollDice(6));
+        setCurrentHP(getMaxHP());
+        setDP(2 * rollDice(6));
+        setSP(5 + rollDice(6));
+    }
+
+    public void lvlUp() {
+        setMaxHP(getMaxHP() + rollDice(6));
+        setDP(getDP() + rollDice(6));
+        setSP(getSP() + rollDice(6));
     }
 
     public int getX() {

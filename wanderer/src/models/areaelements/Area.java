@@ -9,11 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Area {
+
+    private int areaLevel;
     private List<Tile[][]> tiles;
 
     public Area() {
         tiles = new ArrayList<>();
         generateTiles();
+        areaLevel = 1;
     }
 
     private void generateTiles() {
