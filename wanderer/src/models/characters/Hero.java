@@ -1,20 +1,13 @@
 package models.characters;
 
 import models.Direction;
-import models.areaelements.Area;
-import views.Board;
 
 public class Hero extends Character{
-
-    private int x;
-    private int y;
 
     private Direction direction;
 
     public Hero(int level, int x, int y) {
-        super(level);
-        this.x = x;
-        this.y = y;
+        super(level, x, y);
         direction = Direction.DOWN;
         setMaxHP(20 + 3 * rollDice(6));
         setCurrentHP(getMaxHP());
@@ -23,25 +16,21 @@ public class Hero extends Character{
     }
 
     public void lvlUp() {
+        setLevel(getLevel() + 1);
         setMaxHP(getMaxHP() + rollDice(6));
         setDP(getDP() + rollDice(6));
         setSP(getSP() + rollDice(6));
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
+    public void restoreHP() {
+        double chance = Math.random();
+        if (chance < 0.5) {
+            setCurrentHP(Math.min(getCurrentHP() + (getMaxHP() / 10), getMaxHP()));
+        } else if (chance > 0.5 && chance < 0.9) {
+            setCurrentHP((int) Math.min(getCurrentHP() + (getMaxHP() * 0.3), getMaxHP()));
+        } else {
+            setCurrentHP(getMaxHP());
+        }
     }
 
     public Direction getDirection() {
@@ -54,21 +43,21 @@ public class Hero extends Character{
 
     public void moveUp() {
         this.direction = Direction.UP;
-            y--;
+            setY(getY() - 1);
     }
 
     public void moveDown() {
         this.direction = Direction.DOWN;
-            y++;
+            setY(getY() + 1);
     }
 
     public void moveLeft() {
         this.direction = Direction.LEFT;
-            x--;
+            setX(getX() - 1);
     }
 
     public void moveRight() {
         this.direction = Direction.RIGHT;
-            x++;
+            setX(getX() + 1);
     }
 }
