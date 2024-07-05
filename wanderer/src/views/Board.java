@@ -25,10 +25,12 @@ public class Board extends JComponent {
         this.area = area;
         tileSize = 72;
         setPreferredSize(new Dimension(tileSize * 10, tileSize * 10 + 40));
-        setVisible(true);
+        setVisible(false);
+        setFocusable(true);
     }
     public void setController(MainController controller) {
         this.controller = controller;
+        addKeyListener(controller);
     }
 
     public void setHero(Hero hero) {

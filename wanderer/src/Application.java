@@ -1,6 +1,7 @@
 import controllers.MainController;
 import models.areaelements.Area;
 import views.Board;
+import views.IntroPanel;
 
 import javax.swing.*;
 
@@ -13,7 +14,9 @@ public class Application {
 
                 Area area = new Area();
                 Board board = new Board(area);
-                frame.add(board);
+
+                IntroPanel introPanel = new IntroPanel(board);
+                frame.add(introPanel);
 
                 MainController controller = new MainController(board, area);
                 frame.addKeyListener(controller);
@@ -24,6 +27,9 @@ public class Application {
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
                 frame.setResizable(false);
+
+                introPanel.display();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
