@@ -18,4 +18,4 @@ the necromantic skeletons roaming aimlessly.
 ## Instructions:
 You progress through the area/level by finding the monster that has the 
 key (textbox at the bottom of the screen will be yellow when you 
-find him) and kill the Boss of that level.
+find him) and killing the Boss of that level.
